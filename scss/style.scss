@@ -67,6 +67,9 @@ body{
             text-transform: uppercase;
             font-weight: 500;
         }
+        &-link:hover{
+            color: #e6e6e6;
+        }
     }
     
     &__wrapper{
@@ -164,8 +167,14 @@ body{
     background-color: $green;
     color: #ffffff;
     font-size: 14px;
-    padding: 10px 75px;
     margin-top: 0px;
+    transition: 0.2s ease;
+}
+.button:hover{
+    color: $gray;
+}
+.intro__program{
+    padding: 10px 75px;
 }
 
 
