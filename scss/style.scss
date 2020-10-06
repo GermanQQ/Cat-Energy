@@ -35,6 +35,9 @@ body{
     padding: 10px 20px;
     min-height: 65px;   
     color: #222222;
+    position: fixed;
+    background-color: #ffffff;
+    width: 100%;
     &__logo-text{
         font-size: 21px;
         font-weight: 500;
@@ -120,7 +123,7 @@ body{
 
 .page-main{
 
-        
+    padding-top: 65px;
 
     &__wrapper{
         padding-left: 20px;
