@@ -36,7 +36,7 @@ body{
     min-height: 65px;   
     color: #222222;
     position: fixed;
-    background-color: #ffffff;
+    
     width: 100%;
     &__logo-text{
         font-size: 21px;
@@ -47,7 +47,10 @@ body{
     }
 
     @media (min-width: 728px) {
-        min-height: 100px;
+        &{ 
+            min-height: 100px;
+            position: absolute;
+        }
         &__logo-image{
             display: block;
             width: 173px;
@@ -57,6 +60,18 @@ body{
         }
         &__logo-text{
             display: none;
+        }
+    }
+    @media (min-width: 1360px){
+       
+        &{
+            padding: 0 calc(50% - 612px);
+            padding-top: 58px;
+            
+        }
+        &__logo-image{
+            
+            width: auto;
         }
     }
 }
@@ -96,6 +111,14 @@ body{
             background-color: $green;
             width: 100%;
             display: block;
+        }
+    }
+    @media (min-width: 1360px){
+        &-link{
+            color: #ffffff;
+        }
+        &-link--active::after{
+            background-color: #ffffff;
         }
     }
 
@@ -212,11 +235,26 @@ body{
         }
         &__wrapper{
             background-image: url('../img/Product.png');
-            background-size: 80%;
-            background-position: 50% 50%;
+            background-size: contain;
+            background-position: 50% 65%;
             background-repeat: no-repeat;
-            max-height: 1024px;
+            max-height: 1366px;
         }
+    }
+    @media (min-width: 1360px)
+    {
+        &{
+            padding: 0px;
+        }
+        &__wrapper{
+            background-image: url('../img/Product.png'),url('../img/bg.jpg');
+            background-size: 35%, 50%;
+            background-position: 62% 50%, 100% 0;
+            background-repeat: no-repeat, no-repeat;
+            max-height: none;
+            padding: 0 calc(50% - 612px);
+        }
+    
     }
 
     .intro{
@@ -259,12 +297,32 @@ body{
             &__product-img-mb{
                 display: none;
             }
+            @media (min-width: 1360px)
+    {
+        &__title-h1{
+            padding: 55px 0;
+            padding-top: 230px;
+        }
+        &__text{
+            margin-bottom: 65px;
+            
+        }
+    }
             .intro__program{
                 max-width: 245px;
                 min-height: 55px;
                 font-size: 20px;
             }
         }
+    }
+}
+
+@media (min-width: 1360px){
+       
+    .container{
+        max-width: 1224px;
+        width: 100%;
+        margin: 0 auto;
     }
 }
 
@@ -279,7 +337,6 @@ body{
     transition: 0.2s ease;
     width: 245px;
     height: 52px;
-    
 }
 .button:hover{
     color: $gray;
