@@ -42,10 +42,62 @@ body{
         font-size: 21px;
         font-weight: 500;
     }
+    &__logo-image{
+        display: none;
+    }
+
+    @media (min-width: 728px) {
+        min-height: 100px;
+        &__logo-image{
+            display: block;
+            width: 173px;
+        }
+        &__logo-mobile{
+            display: none;
+        }
+        &__logo-text{
+            display: none;
+        }
+    }
 }
 
 
 .main-nav{
+
+    &__list--desktop{
+        display: none;
+        
+    }
+    @media (min-width: 728px){
+        &-item{
+            position: relative;
+            margin: 0 18px;
+        }   
+        &__list--desktop{
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+        }
+        &-link{
+            color: #222222;
+            
+            text-transform: uppercase;
+            
+        }
+        
+        &-link:hover{
+            color: #e6e6e6;
+        }
+        &-link--active::after{
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            height: 2px;
+            background-color: $green;
+            width: 100%;
+            display: block;
+        }
+    }
 
     .site__list{
         display: flex;
@@ -70,6 +122,8 @@ body{
         &-link:hover{
             color: #e6e6e6;
         }
+        
+        
     }
     
     &__wrapper{
@@ -81,8 +135,16 @@ body{
         background-color: #ffffff;
         transition: 0.3s ease;
     }
+    
     &__wrapper--active{
         top: 65px;
+    }
+
+    @media (min-width: 728px)
+    {
+        &__wrapper{
+            display: none;
+        }
     }
     &__burger{
         display: block;
@@ -90,6 +152,12 @@ body{
         height: 24px;
         position: relative;
         z-index: 2;
+    }
+    @media (min-width: 728px)
+    {
+        &__burger{
+            display: none;
+        } 
     }
     &__span-burger,
     &__span-burger::before,
@@ -137,6 +205,19 @@ body{
         background-repeat: no-repeat;
         max-height: 305px;
     }
+    @media (min-width: 728px)
+    {
+        &{
+            padding-top: 100px;
+        }
+        &__wrapper{
+            background-image: url('../img/Product.png');
+            background-size: 80%;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            max-height: 1024px;
+        }
+    }
 
     .intro{
         max-width: 100%;
@@ -159,22 +240,55 @@ body{
             text-transform: uppercase;
             margin-bottom: 35px;
         }
+        @media (min-width: 728px){
+            &{
+                color: #111111;
+                margin-left: 91px;
+                text-align: left;
+            }
+            &__title-h1{
+                font-size: 60px;
+                max-width: 420px;
+                padding: 35px 0;
+            }
+            &__text{
+                font-size: 20px;
+                margin-bottom: 45px;
+                
+            }
+            &__product-img-mb{
+                display: none;
+            }
+            .intro__program{
+                max-width: 245px;
+                min-height: 55px;
+                font-size: 20px;
+            }
+        }
     }
 }
 
 .button{
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: $green;
     color: #ffffff;
-    font-size: 14px;
+    font-size: 20px;
     margin-top: 0px;
     transition: 0.2s ease;
+    width: 245px;
+    height: 52px;
+    
 }
 .button:hover{
     color: $gray;
+    background-color: rgba($color: $green, $alpha: 0.9);
 }
 .intro__program{
-    padding: 10px 75px;
+    width: 100%;
+    max-height: 40px;
+    font-size: 14px;
 }
 
 
