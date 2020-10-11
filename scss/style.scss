@@ -324,14 +324,6 @@ body{
     }
 }
 
-@media (min-width: 1250px){
-       
-    .container{
-        max-width: 1224px;
-        width: 100%;
-        margin: 0 auto;
-    }
-}
 
 .button{
     display: flex;
@@ -512,11 +504,15 @@ body{
 
 .advantages{
     padding: 0 20px;
+
     @media (min-width: 1250px){
         &{
-            padding: $wrap_1224px;
+            max-width: 1224px;
+            width: 100%;
+            margin: 0 auto;
         }
     }
+
     &__block{
         margin-bottom: 40px;
         display: flex;
@@ -540,6 +536,7 @@ body{
         font-family: Arial, Helvetica, sans-serif;
         margin-left: 20px;
     }
+    
     @media (min-width: 728px){
         &{
             padding: 0 30px;
@@ -620,6 +617,12 @@ body{
     background-color: #f2f2f2;
     margin-bottom: 200px;
     padding: 20px 20px;
+    
+    @media (min-width: 1250px){
+        max-width: 1224px;
+        width: 100%;
+        margin: 0 auto;
+    }
     &__title-h2{
         font-size: 36px;
         color: #111111;
