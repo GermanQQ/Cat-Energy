@@ -39,9 +39,11 @@ body{
     background-color:#ffffff;
     width: 100%;
     z-index: 10;
+    
     &__logo-text{
         font-size: 21px;
         font-weight: 500;
+        
     }
     &__logo-image{
         display: none;
@@ -84,7 +86,7 @@ body{
 
 
 .main-nav{
-
+    
     &__list--desktop{
         display: none;
         
@@ -142,6 +144,7 @@ body{
             width: 100%;
             text-align: center;
             border-bottom: 1px solid #e6e6e6;
+            
         }
         &-link{
             color: #222222;
@@ -157,17 +160,21 @@ body{
     }
     
     &__wrapper{
-        top: -200px;
+        top: -170px;
+        transform: scaleY(0);
         position: fixed;
         left: 0;
         width: 100%;
         height: 157px;
         background-color: #ffffff;
-        transition: 0.3s ease;
+        z-index: -3;
+        transition: 0.2s ease-in all;
     }
     
     &__wrapper--active{
         top: 65px;
+        transform: scaleY(1);
+        
     }
 
     @media (min-width: 728px)
@@ -197,7 +204,6 @@ body{
         width: 24px; 
         height: 2px;
         background-color: #222222;
-        
     }
         &__span-burger::before{
             content: '';
@@ -211,10 +217,10 @@ body{
         }
         
     &__burger--active &__span-burger::before{
-        transform: rotate(35deg);
+        transform: rotate(40deg);
     }
     &__burger--active &__span-burger::after{
-        transform: rotate(-35deg);
+        transform: rotate(-40deg);
     }
     &__burger--active &__span-burger{
         height: 0;
