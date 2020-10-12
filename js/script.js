@@ -25,6 +25,12 @@ $(window).scroll(function() {
 	scrollPrev = scrolled;
 });
 
+    $('#slider__desktop').twentytwenty({
+        before_label: 'БЫЛО', // Set a custom before label
+        after_label: 'СТАЛО', // Set a custom after label
+        click_to_move: true,
+    });
+
 });
 
 

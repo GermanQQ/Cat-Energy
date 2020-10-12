@@ -109,7 +109,7 @@ body{
         }
         
         &-link:hover{
-            opacity: 0.6;
+            color: #f0b905;
         }
         &-link--active::after{
             content: '';
@@ -349,6 +349,9 @@ body{
     max-height: 40px;
     font-size: 14px;
 }
+.intro__program:hover{
+    color: #f0b905;
+}
 
 .categories{
     padding: 10px 20px;
@@ -509,13 +512,6 @@ body{
 .advantages{
     padding: 0 20px;
 
-    @media (min-width: 1250px){
-        &{
-            max-width: 1224px;
-            width: 100%;
-            margin: 0 auto;
-        }
-    }
 
     &__block{
         margin-bottom: 40px;
@@ -574,6 +570,14 @@ body{
 
         }
     }
+    @media (min-width: 1250px){
+        &{
+            max-width: 1224px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 0;
+        }
+    }
     &__number{
         display: none;
         position: absolute;
@@ -618,18 +622,19 @@ body{
 }
 
 .before-after{
-    background-color: #f2f2f2;
-    padding: 20px 20px;
-    
-    @media (min-width: 1250px){
-        max-width: 1224px;
-        width: 100%;
-        margin: 0 auto;
+    &__wrapper{
+        position: relative;
+        padding: 0 20px;
+        background-color: #f2f2f2;
     }
+  
+    
+    
     &__title-h2{
         font-size: 36px;
         color: #111111;
-        padding: 30px 0;
+        padding: 30px 20px;
+        background-color: #f2f2f2;
     }
     &__text{
         color: $gray;
@@ -643,20 +648,47 @@ body{
         &{
             background-color: transparent;
             border-top: 1px solid #f2f2f2;
-            padding: 0 30px;
+            
+        }
+        &__wrapper{
+            background-color: transparent;
+            padding: 0px;
         }
         &__title-h2{
             font-size: 60px;
-            padding: 50px 0;
+            padding: 50px 30px;
+            background-color: #ffffff;
             
         }
         &__text{
             max-width: 100%;
             font-size: 16px;
             line-height: 1.5;
+            
         }
         &__text-box{
             max-width: 100%;
+            padding: 0 30px;
+        }
+    }
+    @media (min-width: 1250px){
+        &{
+            border-top: none;
+        }
+        &__text-box{
+            max-width: 450px;
+            padding: 0;
+        }
+        &__title-h2{
+            background-color: #ffffff;
+            padding: $wrap_1224px;
+            width: 100vw;
+            padding-top: 45px;
+            padding-bottom: 45px;
+            
+        }
+        &__text{
+            margin-top: 70px;
         }
     }
     &__info{
@@ -737,11 +769,48 @@ body{
             line-height: 1.5;
         }
     }
+    @media (min-width: 1250px){
+        &__info{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        &__info-item-box{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+       
+        &__info-text--up{
+            background-color: #f2f2f2;
+        }
+        
+        &__cost{
+            flex-direction: row;
+        }
+        &__cost span{
+            margin-left: 64px;
+        }
+        
+        
+    }
 
     &__slider{
         min-width: 0;
         position: relative;
         padding: 20px 0;
+        width: 100%;
+    }
+    @media (min-width: 1250px){
+        &__wrapper{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: $wrap_1224px;
+            width: 100%;
+            margin: 0 auto;
+        }
     }
 
 .slick-list {
@@ -794,5 +863,39 @@ body{
         border-radius: 6px;
         display: flex;
     }
+    &__slider--desktop{
+        display: none;
+    }
+    @media (min-width: 728px){
+        &__slider-block{
+            display: none;
+        }
+        &__slider--desktop{
+            max-width: 690px;
+            margin: 0 auto;
+            
+        }
+        &__slider{
+            background-color: #f2f2f2;
+            position: relative;
+            
+            
+        }
+        &__slider--desktop{
+            
+            display: block;
+        }
+    }
+    @media (min-width: 1250px){
+        &{
+            background-color: #f2f2f2;
+        }
+        &__slider{
+            background-color: transparent;
+            max-width: 667px;
+        }
+        
+    }
+
 }
 

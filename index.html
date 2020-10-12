@@ -113,8 +113,10 @@
 
 
        <section class="before-after">
+            <h2 class="before-after__title-h2">Живой пример</h2>
+           <div class="before-after__wrapper">
+
                <div class="before-after__text-box">
-                    <h2 class="before-after__title-h2">Живой пример</h2>
                     <p class="before-after__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
                     <div class="before-after__info-item-box">
                     <div class="before-after__info">
@@ -137,16 +139,26 @@
                     </div>
                     <div class="before-after__item">
                         <img src="img/after-mobile.png" alt="Cat" class="before-slider__img">
-                    </div>
-                    
+                    </div> 
+               </div>
+
+               <div id="slider__desktop" class="before-after__slider--desktop">
+                    <!-- The before image is first -->
+                    <img src="img/before-desktop@1x.png" />
+                    <!-- The after image is last -->
+                    <img src="img/after-desktop@1x.png" />
                </div>
            </div>
+        </div>
        </section>
     </main>
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/jquery.event.move.js" type="text/javascript"></script>
+    <script src="js/jquery.twentytwenty.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/twentytwenty.css" type="text/css" media="screen" />
     <script src="js/script.js"></script>
 </body>
 </html>
