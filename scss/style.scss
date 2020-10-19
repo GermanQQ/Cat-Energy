@@ -827,7 +827,7 @@ body{
         position: absolute;
         bottom: 20px;
         background-color: transparent;
-        z-index: 10;
+        z-index: 5;
         font-size: 16px;
         text-transform: uppercase;
     }
@@ -899,3 +899,99 @@ body{
 
 }
 
+
+.contacts{
+    &{
+        position: relative;
+    }
+    &__info{
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 768px;
+        max-height: 201px;
+        line-height: 1.4;
+        margin: 0 auto;
+    }
+    &__title-h3{
+        font-size: 16px;
+        text-transform: uppercase;
+        color: #111111;
+    }
+    &__street-text{
+        color: $gray;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    @media (min-width: 728px){
+        &__info{
+            padding: 65px 70px;
+        }
+        &__title-h3{
+            font-size: 20px;
+            line-height: 1.5;
+        }
+        &__street-text{
+            font-size: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        &__street-text span{
+            margin-top: 10px;
+        }
+
+    }
+    @media (min-width: 1250px){
+       .wrapper{
+           padding: $wrap_1224px;
+       }
+        &__info{
+            position: absolute;
+            z-index: 5;
+                background-color: #ffffff;
+                width: 570px;
+                height: 201px;
+                line-height: 1.4;
+                top: 50%;
+                transform: translateY(-50%);
+
+                
+            
+        }
+    }
+    &__map{
+        width: 100%;
+        height: 400px;
+    }
+    
+}
+
+.footer-bottom{
+    width: 100%;
+    height: 230px;
+    background-color: #f2f2f2;
+    text-align: center;
+
+
+    &__social{
+
+    }
+
+    &__title img{
+        max-width: 140px;
+    }
+    &-link--vk img{
+        max-width: 22px;
+    }
+    &-link--in img{
+        max-width: 16px;
+    }
+    &-link--fb img{
+        max-width: 10px;
+    }
+}

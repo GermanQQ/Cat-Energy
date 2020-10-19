@@ -30,7 +30,27 @@ $(window).scroll(function() {
         after_label: 'СТАЛО', // Set a custom after label
         click_to_move: true,
     });
-
+    
 });
 
+
+function initMap(){
+
+
+    
+
+    const pos = {lat: 48.286225, lng: 25.933339};
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: pos,
+        zoom: 16
+      });
+
+      const marker = new google.maps.Marker({
+        position: pos,
+        map: map,
+        title: 'Cat Energy',
+        icon: '../img/map-pin.png',
+        optimized: true,
+      });
+}
 
