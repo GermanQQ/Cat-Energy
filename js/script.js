@@ -49,8 +49,9 @@ function initMap(){
         position: pos,
         map: map,
         title: 'Cat Energy',
-        icon: '../img/map-pin.png',
         optimized: true,
+        icon: '../img/map-pin.png',
+        
       });
 }
 
