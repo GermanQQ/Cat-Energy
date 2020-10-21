@@ -45,12 +45,17 @@ function initMap(){
         zoom: 16
       });
 
+
+      const imageMarker = {
+          url: '../img/map-icon.png'
+      };
+
       const marker = new google.maps.Marker({
         position: pos,
         map: map,
         title: 'Cat Energy',
         optimized: true,
-        icon: '../img/map-pin.png',
+        icon: imageMarker,
         
       });
 }
