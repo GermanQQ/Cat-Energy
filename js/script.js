@@ -30,14 +30,19 @@ $(window).scroll(function() {
         after_label: 'СТАЛО', // Set a custom after label
         click_to_move: true,
     });
+
     
+    
+
+        // const activePage = document.querySelector('.main-nav-link');
+
+        // if (activePage.classList.contains('main-nav-link--active')){
+        //   document.querySelector('.main-nav-link').style.color = '#ffffff';
+        // }  
 });
 
 
 function initMap(){
-
-
-    
 
     const pos = {lat: 48.286225, lng: 25.933339};
     map = new google.maps.Map(document.getElementById('map'), {

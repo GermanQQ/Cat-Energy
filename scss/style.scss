@@ -123,10 +123,10 @@ body{
     }
     @media (min-width: 1250px){
         &-link{
-            color: #ffffff;
+            color: #222222;
         }
         &-link--active::after{
-            background-color: #ffffff;
+            background-color: $green;
         }
     }
 
@@ -750,7 +750,7 @@ body{
             font-size: 30px;
             padding: 22px 0;
             &--up{
-                background-color: #ffffff;
+                background-color: $white;
                 left: 0;
                 transform: translateX(0);
                 bottom: 12px;
@@ -1055,3 +1055,6 @@ body{
     }
     
 }
+
+
+
