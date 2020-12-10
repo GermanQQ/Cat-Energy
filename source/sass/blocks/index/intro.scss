@@ -1,0 +1,120 @@
+.intro {
+  background-repeat: no-repeat;
+  background-position: top;
+  background-image:
+    linear-gradient(to top, #ffffff 97px, transparent 97px),
+    url("../img/raster/index-background-mobile@1x.jpg"),
+    linear-gradient(to top, #ffffff 197px, #61a63c 197px);
+  background-color: #61a63c;
+  background-size: 100%;
+
+  @include retina {
+    background-image:
+      linear-gradient(to top, #ffffff 97px, transparent 97px),
+      url("../img/raster/index-background-mobile@2x.jpg"),
+      linear-gradient(to top, #ffffff 197px, #61a63c 197px);
+  }
+
+  @include tablet {
+    background: #ffffff;
+  }
+
+  @include desktop {
+    min-height: 560px;
+    background: transparent;
+  }
+}
+
+.intro__wrapper {
+  position: relative;
+  padding-bottom: 22px;
+  text-align: center;
+  color: #ffffff;
+  z-index: 0;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 20px;
+    text-align: left;
+    color: $black;
+  }
+}
+
+.intro__title {
+  @include desktop {
+    margin-top: 34px;
+  }
+}
+
+.intro__text {
+  margin-top: 5px;
+  margin-bottom: 28px;
+  font-size: 14px;
+  text-transform: uppercase;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 22px;
+    padding-bottom: 15px;
+  }
+
+  @include desktop {
+    padding-bottom: 25px;
+  }
+}
+
+.intro__image-wrapper {
+  @include tablet {
+    display: flex;
+    justify-content: center;
+    order: 2;
+    width: 100%;
+  }
+}
+
+.intro__content {
+  @include tablet {
+    margin-left: 100px;
+  }
+}
+
+.intro__image {
+  margin: 0 auto;
+  margin-bottom: 2px;
+  height: auto;
+  animation-name: fadeInLeft;
+  animation-duration: 1.5s;
+
+  @include tablet {
+    margin-top: -80px;
+    z-index: -1;
+    width: 709px;
+    height: 609px;
+  }
+
+  @include desktop {
+    position: absolute;
+    top: 0;
+    left: 490px;
+    margin-top: 5px;
+    margin-bottom: 50px;
+    width: 552px;
+    height: 499px;
+  }
+}
+
+.intro__btn {
+  order: 1;
+  font-size: 14px;
+  color: #ffffff;
+
+  @include tablet {
+    display: inline-block;
+    width: auto;
+    margin-bottom: 3px;
+    padding: 16px 27px;
+    font-size: 20px;
+  }
+}

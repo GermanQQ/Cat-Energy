@@ -1,0 +1,44 @@
+.page-header {
+  position: relative;
+  background-color: #ffffff;
+
+  @include desktop {
+    &--index {
+      position: relative;
+      z-index: 0;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: calc(50% + #{$desktop-pads});
+        background-color: #63a73a;
+        background-image: url("../img/raster/index-background-desktop@1x.jpg");
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: cover;
+        z-index: -1;
+
+        @include retina {
+          background-image: url("../img/raster/index-background-desktop@2x.jpg");
+        }
+      }
+    }
+  }
+}
+
+.page-header__wrapper {
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  @include desktop {
+    padding-top: 52px;
+  }
+}

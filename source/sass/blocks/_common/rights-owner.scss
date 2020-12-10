@@ -1,0 +1,36 @@
+.rights-owner {
+  @include tablet {
+    padding-top: 20px;
+  }
+
+  @include desktop {
+    padding-top: 0;
+  }
+}
+
+.rights-owner__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Arial", sans-serif;
+  text-decoration: none;
+  color: $darkgrey;
+
+  &:hover .rights-owner__logo {
+    fill: $green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.rights-owner__logo {
+  width: 27px;
+  height: 34px;
+  fill: #666666;
+
+  @include tablet {
+    margin-left: 22px;
+  }
+}
